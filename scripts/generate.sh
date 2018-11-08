@@ -24,6 +24,9 @@ if [ ! -e $NODE_VERSION_NUM ] ; then
     make install && \
     cd .. && \
     rm -r node-v$NODE_VERSION_NUM"
+
+    echo "RUN npm install -g yarn@0.18.1"
+    echo "ENV PATH \"$PATH:/root/.yarn/bin/:/usr/local/bin\""
 fi
 
 if [ ! -e $PYTHON_VERSION_NUM ] ; then
